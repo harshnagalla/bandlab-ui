@@ -1,0 +1,34 @@
+@import '../common.scss';
+
+.home {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1080px;
+	background-color: black;
+
+	@include forMostPhones {
+		max-width: 767px;
+	}
+}
+
+.home__image {
+	width: 100%;
+	z-index: -1;
+}
+
+.home__hashtag {
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+	text-transform: uppercase;
+	display: flex;
+	margin: 30px auto;
+	justify-content: center;
+
+	@include forMostPhones {
+		font-size: 12px;
+		margin: 20px auto;
+	}
+}
