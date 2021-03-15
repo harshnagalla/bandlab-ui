@@ -1,0 +1,81 @@
+@import '../../common.scss';
+
+.headerImage {
+	width: 100%;
+	position: relative;
+	align-items: center;
+	@include forMostPhones {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.headerImage__image {
+	width: 100%;
+}
+.headerImage__text {
+	position: absolute;
+	top: 300px;
+	left: 0;
+	width: 100%;
+}
+
+.headerImage__overlay {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	right: 20px;
+	top: 50%;
+	z-index: 1000;
+	color: #ffffff;
+	font-weight: bold;
+	justify-content: flex-start;
+	float: right;
+
+	@include forMostPhones {
+		position: relative;
+		width: 200px;
+		align-items: center;
+		right: 0;
+		left: 0;
+		margin-top: 20px;
+	}
+}
+
+.headerImage__overlayHeading {
+	color: white;
+	font: bold 45px Helvetica, Sans-Serif;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+
+	@include forMostPhones {
+		font-size: 14px;
+	}
+}
+
+.headerImage__overlayDescription {
+	color: white;
+	font-size: 14px;
+	margin-top: 10px;
+
+	@include forMostPhones {
+		font-size: 8px;
+		text-align: center;
+		margin-top: 5px;
+	}
+}
+
+.headerImageOverlay__button {
+	background-color: orange;
+	font-size: 10px;
+	font-weight: 600;
+	border: 0;
+	padding: 10px 20px;
+	color: white;
+	max-width: fit-content;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
